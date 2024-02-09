@@ -126,58 +126,28 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _checkWinner() {
-    if (displayExOh[0] == displayExOh[1] &&
-        displayExOh[0] == displayExOh[2] &&
-        displayExOh[0] != '') {
-      _showWinDiaog(displayExOh[0]);
-    }
-
-    if (displayExOh[3] == displayExOh[4] &&
-        displayExOh[3] == displayExOh[5] &&
-        displayExOh[3] != '') {
-      _showWinDiaog(displayExOh[3]);
-    }
-
-    if (displayExOh[6] == displayExOh[7] &&
-        displayExOh[6] == displayExOh[8] &&
-        displayExOh[6] != '') {
-      _showWinDiaog(displayExOh[6]);
-    }
-
-    if (displayExOh[0] == displayExOh[3] &&
-        displayExOh[0] == displayExOh[6] &&
-        displayExOh[0] != '') {
-      _showWinDiaog(displayExOh[0]);
-    }
-
-    if (displayExOh[1] == displayExOh[4] &&
-        displayExOh[1] == displayExOh[7] &&
-        displayExOh[1] != '') {
-      _showWinDiaog(displayExOh[1]);
-    }
-
-    if (displayExOh[2] == displayExOh[5] &&
-        displayExOh[2] == displayExOh[8] &&
-        displayExOh[2] != '') {
-      _showWinDiaog(displayExOh[2]);
-    }
-
-    if (displayExOh[0] == displayExOh[4] &&
-        displayExOh[0] == displayExOh[8] &&
-        displayExOh[0] != '') {
-      _showWinDiaog(displayExOh[0]);
-    }
-
-    if (displayExOh[6] == displayExOh[4] &&
-        displayExOh[6] == displayExOh[2] &&
-        displayExOh[6] != '') {
-      _showWinDiaog(displayExOh[6]);
-    }
-
-    else if (filledBoxes == 9) {
-      _showDrawDiaog();
-    }
+  // Check for win conditions
+  if (displayExOh[0] == displayExOh[1] && displayExOh[0] == displayExOh[2] && displayExOh[0] != '') {
+    _showWinDiaog(displayExOh[0]);
+  } else if (displayExOh[3] == displayExOh[4] && displayExOh[3] == displayExOh[5] && displayExOh[3] != '') {
+    _showWinDiaog(displayExOh[3]);
+  } else if (displayExOh[6] == displayExOh[7] && displayExOh[6] == displayExOh[8] && displayExOh[6] != '') {
+    _showWinDiaog(displayExOh[6]);
+  } else if (displayExOh[0] == displayExOh[3] && displayExOh[0] == displayExOh[6] && displayExOh[0] != '') {
+    _showWinDiaog(displayExOh[0]);
+  } else if (displayExOh[1] == displayExOh[4] && displayExOh[1] == displayExOh[7] && displayExOh[1] != '') {
+    _showWinDiaog(displayExOh[1]);
+  } else if (displayExOh[2] == displayExOh[5] && displayExOh[2] == displayExOh[8] && displayExOh[2] != '') {
+    _showWinDiaog(displayExOh[2]);
+  } else if (displayExOh[0] == displayExOh[4] && displayExOh[0] == displayExOh[8] && displayExOh[0] != '') {
+    _showWinDiaog(displayExOh[0]);
+  } else if (displayExOh[6] == displayExOh[4] && displayExOh[6] == displayExOh[2] && displayExOh[6] != '') {
+    _showWinDiaog(displayExOh[6]);
+  } else if (filledBoxes == 9) {
+    _showDrawDiaog();
   }
+}
+
 
   void _showDrawDiaog() {
     showDialog(
